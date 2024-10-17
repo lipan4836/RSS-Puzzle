@@ -1,6 +1,7 @@
 export type BasicProps = {
   className?: string;
   id?: string;
+  name?: string;
 };
 
 export type TextProps = {
@@ -21,4 +22,28 @@ export type ImgProps = {
   width?: number;
   height?: number;
   className?: string;
+};
+
+export type InputProps = BasicProps & {
+  type: 'text' | 'password' | 'email' | 'number' | 'checkbox' | 'radio';
+  placeholder?: string;
+  value?: string;
+  required?: boolean;
+};
+
+export type SelectProps = BasicProps & {
+  options: { value: string; label: string }[];
+  multiple?: boolean;
+};
+
+export type TextAreaProps = BasicProps & {
+  rows?: number;
+  cols?: number;
+  placeholder?: string;
+  value?: string;
+};
+
+export type ButtonProps = BasicProps & {
+  type: 'submit' | 'reset' | 'button';
+  text: string;
 };
