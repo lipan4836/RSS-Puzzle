@@ -1,6 +1,16 @@
-import { createTextElement } from '../../utils/elements';
+import createFormElement from '../../utils/elementsForm';
 
 export default function renderHomePage() {
-  const h1 = createTextElement({ tag: 'h1', text: 'Home Page', className: 'h1' });
-  document.querySelector<HTMLDivElement>('#app')?.appendChild(h1);
+  if (!localStorage.getItem('userName')) {
+    const userNameInput = createFormElement('input', {
+      type: 'text',
+      placeholder: 'Enter your name',
+      required: true,
+      className: 'inputName',
+      id: 'username',
+    });
+
+    document.querySelector<HTMLDivElement>('#app')?.appendChild(userNameInput);
+  }
+  // document.querySelector<HTMLDivElement>('#app')?.appendChild(h1);
 }

@@ -1,0 +1,34 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+  .headerWrap {
+    width: 1024px;
+    max-width: 1024px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .h1 {
+      font-size: 2rem;
+      line-height: 1;
+    }
+
+    .logoutWrap {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+
+      .userName {
+        font-size: 1rem;
+      }
+
+      .logoutBtn {
+        padding: 6px 12px;
+        cursor: pointer;
+      }
+    }
+  }
+}
