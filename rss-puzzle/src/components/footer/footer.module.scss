@@ -1,0 +1,29 @@
+.footer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .footerWrap {
+    width: 1024px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .ghLink {
+      width: 40px;
+      height: 40px;
+      background: url('./github-logo.svg') center / contain;
+    }
+
+    .createdDate {
+      font-size: 1.1rem;
+    }
+
+    .rssLink {
+      width: 40px;
+      height: 40px;
+      background: url('./rs-logo.svg') center / contain;
+    }
+  }
+}
